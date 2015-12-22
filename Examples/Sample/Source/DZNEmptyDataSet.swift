@@ -124,17 +124,14 @@ extension UIScrollView {
                 view?.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
                 view?.hidden = false
                 
-//                let gesture = UITapGestureRecognizer.init(target: self, action: Selector("didTapContentView:"))
-//                gesture.delegate = self
-//                
-//                
-//                view?.tapGesture =
-//                view?.tapGesture?.delegate = self
-//                view?.addGestureRecognizer((view?.tapGesture?)!)
+                // Gesture Recognizer
+                let gesture = UITapGestureRecognizer(target: self, action: "didTapContentView")
                 
-//                view.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dzn_didTapContentView:)];
-//                view.tapGesture.delegate = self;
-//                [view addGestureRecognizer:view.tapGesture];
+                view?.tapGesture = gesture
+                
+                view?.addGestureRecognizer((view?.tapGesture)!)
+                
+                
                 
                 self.emptyDataSetView = view;
             }
