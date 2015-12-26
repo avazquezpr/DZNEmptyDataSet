@@ -131,8 +131,6 @@ extension UIScrollView {
                 
                 view?.addGestureRecognizer((view?.tapGesture)!)
                 
-                
-                
                 self.emptyDataSetView = view;
             }
             
